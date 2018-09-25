@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+// Imports functions, variables, and mixins that are needed by other Bootstrap files
+@import "styles/variables";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "styles/reset";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
+  font-family: 'Nanum Gothic', sans-serif !important;
+}
