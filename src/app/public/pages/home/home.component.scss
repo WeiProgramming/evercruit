@@ -4,6 +4,7 @@
   height: 100vh;
   background-size: cover;
   background-position: top;
+  background-color: aliceblue;
 
   .mat-card {
     background: none;
@@ -17,5 +18,12 @@
 
   button {
     margin: 3%;
+  }
+
+}
+
+.container {
+  .home-section {
+    margin: 5% 0;
   }
 }
