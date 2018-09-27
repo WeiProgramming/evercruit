@@ -4,6 +4,7 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "styles/reset";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
 
 h1,h2,h3,h4,h5,p,span {
   font-family: 'Nanum Gothic', sans-serif !important;

@@ -1,6 +1,10 @@
 mat-toolbar {
   display: flex;
 
+  mat-icon {
+    margin: 0 1%;
+  }
+
 
   .left {
     flex: 1;

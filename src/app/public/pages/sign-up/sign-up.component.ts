@@ -8,11 +8,11 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class SignUpComponent implements OnInit {
   public recruiterUrl = '/signup/recruiter';
-  public userType: string;
+  public isRecruiter: boolean;
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.activatedRoute.snapshot['_routerState'].url === this.recruiterUrl ? this.userType = 'Recruiter' : this.userType = 'Candidate';
+    this.activatedRoute.snapshot['_routerState'].url === this.recruiterUrl ? this.isRecruiter = true : this.isRecruiter = false;
   }
 
 }

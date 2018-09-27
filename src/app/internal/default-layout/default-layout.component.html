@@ -1,14 +1,23 @@
 <div>
   <mat-toolbar>
     <div class ="left nav-text">
-      <span><mat-icon>delete</mat-icon><a routerLink="/">Home</a></span>
+      <span><a routerLink="/">Home</a></span>
     </div>
     <div class ="center">
+      <mat-icon>dashboard</mat-icon>
       <span>EverCruiter</span>
     </div>
     <div class ="right nav-text">
-      <span><a routerLink="/login">Login</a></span>
-      <span><a routerLink="/signup">Sign Up</a></span>
+      <mat-form-field floatLabel="never">
+        <mat-select placeholder="Hello, Jordan">
+          <mat-option>
+            Dashboard
+          </mat-option>
+          <mat-option>
+            Logout
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
   </mat-toolbar>
   <router-outlet></router-outlet>

@@ -1,6 +1,13 @@
 mat-toolbar {
   display: flex;
 
+  mat-icon {
+    margin: 0 1%;
+  }
+
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+  }
 
   .left {
     flex: 1;
@@ -42,4 +49,5 @@ mat-toolbar {
     }
   }
 }
+
 

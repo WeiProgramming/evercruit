@@ -1,0 +1,31 @@
+.dashboard-container {
+  margin-top: 3%;
+  .job-list {
+    background-color: #d6d6d6;
+    height: 600px;
+    margin-bottom: 2%;
+    overflow: scroll;
+    padding: 2%;
+    .job-list-header {
+      display: flex;
+      flex-direction: row;
+      h3 {
+        flex: 1;
+        justify-content: flex-start;
+      }
+      mat-icon {
+        justify-content: flex-end;
+        font-size: 32px;
+      }
+    }
+  }
+  .calendar {
+    background-color: #d6d6d6;
+    padding: 2%;
+    margin-bottom: 3%;
+    height: 900px;
+    h3 {
+      padding: 2% 0;
+    }
+  }
+}
