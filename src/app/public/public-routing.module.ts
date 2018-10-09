@@ -3,6 +3,7 @@ import {DefaultLayoutComponent} from './default-layout/default-layout.component'
 import {LoginComponent} from './pages/login/login.component';
 import {SignUpComponent} from './pages/sign-up/sign-up.component';
 import {HomeComponent} from './pages/home/home.component';
+import {SignUpRecruiterComponent} from './pages/sign-up-recruiter/sign-up-recruiter.component';
 
 export const routes: Routes = [
   {
@@ -21,11 +22,14 @@ export const routes: Routes = [
       },
       {
         path: 'signup',
-        component: SignUpComponent,
         children: [
           {
-            path: 'recruiter',
+            path: '',
             component: SignUpComponent
+          },
+          {
+            path: 'recruiter',
+            component: SignUpRecruiterComponent
           }
         ]
       },

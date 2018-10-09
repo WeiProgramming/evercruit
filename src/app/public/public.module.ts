@@ -8,6 +8,7 @@ import {MaterialModule} from '../shared/material.module';
 import { DefaultLayoutComponent } from './default-layout/default-layout.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LoginComponent } from './pages/login/login.component';
+import { SignUpRecruiterComponent } from './pages/sign-up-recruiter/sign-up-recruiter.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './pages/login/login.component';
     HomeComponent,
     DefaultLayoutComponent,
     SignUpComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpRecruiterComponent
   ]
 })
 export class PublicModule { }
