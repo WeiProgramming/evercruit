@@ -4,6 +4,7 @@
   height: 100vh;
   background-size: cover;
   background-position: top;
+  position: relative;
 
   .mat-card {
     background: none;
@@ -17,8 +18,20 @@
 
   button {
     margin: 3%;
+    z-index: 5;
   }
+}
 
+.header-container:after {
+  position: absolute;
+  content: '';
+  width: inherit;
+  height: inherit;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 30px solid white;
 }
 
 .container {
