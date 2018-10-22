@@ -2,7 +2,7 @@ import {
   Component,
   ChangeDetectionStrategy,
   ViewChild,
-  TemplateRef
+  TemplateRef, OnInit
 } from '@angular/core';
 import {
   startOfDay,
@@ -21,6 +21,7 @@ import {
   CalendarEventTimesChangedEvent,
   CalendarView
 } from 'angular-calendar';
+import {CandidateService} from '../../services/candidate/candidate.service';
 
 const colors: any = {
   red: {
@@ -42,7 +43,7 @@ const colors: any = {
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
 
   view: CalendarView = CalendarView.Month;
 
@@ -111,8 +112,6 @@ export class DashboardComponent {
 
   activeDayIsOpen: boolean = true;
 
-  constructor() {}
-
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
       this.viewDate = date;
@@ -156,4 +155,9 @@ export class DashboardComponent {
     this.refresh.next();
   }
 
+  constructor(private candidateService: CandidateService) {}
+  ngOnInit(): void {
+    this.candidateService.testCall().subscribe(res => {
+    });
+  }
 }
