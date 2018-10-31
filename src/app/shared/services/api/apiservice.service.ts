@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {HttpClient, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -24,7 +24,12 @@ export class TokenIntercepter implements HttpInterceptor{
 export class ApiserviceService {
   public baseApi = 'http://localhost:8000/api';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
+  token(path: string, body?): Observable<any> {
+    const url = `${this.baseApi}${path}`;
+    // const postBody = `grant_type=password&username=${body.email}&password${body.password}`;
+    return this.http.post(url, body);
+  }
 
 }
